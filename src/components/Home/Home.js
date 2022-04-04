@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Logos from '../../assets/images/logo-s.png';
 import { Link } from "react-router-dom";
 import './Home.scss';
 import AnimateDletters from "../AnimateLetter";
+import resume from '../../assets/resume.pdf'
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -34,7 +34,7 @@ const Home = () => {
                 </h1>
                 <h2>Frontend Developer | React | Javascript</h2>
                 <Link to="/contact" className="flat-button">CONTACT ME</Link>
-                <button className="flat-button">Download Resume</button>
+                <a href={resume} className="flat-button" download="Venkatesh Ramalingam resume.pdf"> Download CV </a>
             </div>
         </div>
     )
