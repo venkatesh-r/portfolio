@@ -1,0 +1,15 @@
+.skills-page {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+            li {
+                width: 100px;
+                height: 100px;
+                float: left;
+                font-size: 80px;
+                margin: 20px 0 0 15px;
+                display: block;
+            }
+    }
+}
