@@ -4,12 +4,16 @@
         margin: 0;
         padding: 0;
             li {
-                width: 100px;
-                height: 100px;
+                width: 80px;
+                height: 80px;
                 float: left;
-                font-size: 80px;
+                font-size: 60px;
                 margin: 20px 0 0 15px;
                 display: block;
+                transition: all 0.3s;
+                &:hover {
+                    transform: scale(1.5);
+                }
             }
     }
 }

@@ -25,7 +25,7 @@ const About = () => {
                     idx={15} />
                 </h1>
                 <p>Having 10 years of experience in the field of web development, Well versed knowledge on solving the cross browser compatibility issues both Web and Mobile platforms. </p>
-                <p>I spends free time reading and going on travelling.</p>
+                <p>I spends free time reading and travelling.</p>
             </div>
             <div className="stage-cube-cont">
                 <div className="cubespinner">

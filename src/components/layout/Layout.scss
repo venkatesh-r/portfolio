@@ -2,6 +2,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: 1;
 }
 
 .top-tags {
@@ -102,11 +103,11 @@
                 animation-delay: 1.3s;
             }
         }
-        /* .text-animate-hover {
+        .text-animate-hover {
             &:hover {
                 color: #fff;
             }
-        } */
+        } 
 }
 
 .container.skills-page {
