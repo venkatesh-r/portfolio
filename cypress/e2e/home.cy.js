@@ -1,3 +1,5 @@
+/* global cy */
+
 describe("template spec", () => {
   it("passes", () => {
     cy.visit("http://localhost:3000/")
@@ -8,5 +10,6 @@ describe("template spec", () => {
     )
 
     cy.get("h2").should("have.text", "Frontend Developer | React | Javascript")
+    cy.get("a").should("have.text", "CONTACT ME Download CV ")
   })
 })
