@@ -16,19 +16,10 @@ This is my personal portfolio website showcasing my skills, projects, and profes
 
 ## Features
 
-**Introduction:** Little Introduction  
- **About Me:** My details and expertise  
- **Skills:** HTML5, CSS3, SASS, Javascript, React, Angular, Node JS, MongoDB
+**Introduction:** A brief overview of who I am.  
+**About Me:** My background, skills, and expertise.
+**Skills:** HTML5, CSS3, SASS, Javascript, React, Angular, Node JS, MongoDB.
 **Contact:** How to reach me
-
-## Installation & Setup
-
-To run the project locally:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/venkatesh-r/portfolio.git
-   ```
 
 ## Project Structure
 
@@ -47,8 +38,8 @@ Tinder-Clone/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/venkatesh-r/dev-tinder-ui.git
-   cd dev-tinder-ui
+   git clone https://github.com/venkatesh-r/portfolio.git
+   cd portfolio
    ```
 2. **Install dependencies**
    ```bash
