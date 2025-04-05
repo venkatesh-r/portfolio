@@ -26,15 +26,25 @@ test("Renders about me description", () => {
   );
 
   const firstLine = screen.getByText(
-    / With over a decade of hands-on experience in the dynamic realm of web development, I have honed my skills in creating impactful digital solutions that resonate with users. My expertise spans across a wide spectrum of technologies including HTML5, CSS3, SASS, JavaScript, jQuery, AngularJS, and ReactJS. Throughout my career, I have demonstrated a keen eye for detail coupled with a strategic mindset, enabling me to conceptualize, design, and implement solutions that exceed client expectations./
+    /With over a decade of hands-on experience in the dynamic realm of web development, I have honed my skills in creating impactful digital solutions that resonate with users./
   );
 
-  const paragraph = screen.getByText(firstLine, { exact: false });
-
   const secondLine = screen.getByText(
+    /My expertise spans across a wide spectrum of technologies including HTML5, CSS3, SASS, JavaScript, jQuery, AngularJS, and ReactJS./
+  );
+
+  const thirdLine = screen.getByText(
+    /Throughout my career, I have demonstrated a keen eye for detail coupled with a strategic mindset, enabling me to conceptualize, design, and implement solutions that exceed client expectations./
+  );
+
+  //const paragraph = screen.getByText(firstLine, { exact: false });
+
+  const fourthLine = screen.getByText(
     /I spends free time reading and travelling./
   );
 
-  expect(paragraph).toBeInTheDocument();
+  expect(firstLine).toBeInTheDocument();
   expect(secondLine).toBeInTheDocument();
+  expect(thirdLine).toBeInTheDocument();
+  expect(fourthLine).toBeInTheDocument();
 });
