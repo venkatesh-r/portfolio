@@ -13,7 +13,7 @@ test("Heading renders", () => {
   expect(screen.getByText("Skills")).toBeInTheDocument();
 });
 
-test("Heading renders", () => {
+test("Paragraph renders", () => {
   render(
     <BrowserRouter>
       <Skills />
