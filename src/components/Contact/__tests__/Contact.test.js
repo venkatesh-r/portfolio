@@ -2,6 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 import { screen, render, fireEvent } from "@testing-library/react";
 import Contact from "../Contact";
 import "@testing-library/jest-dom";
+import emailjs from "@emailjs/browser";
 
 test("Header renders", () => {
   render(
@@ -60,5 +61,34 @@ describe("contact form", () => {
 
     //Submit the form
     fireEvent.click(sendButton);
+  });
+});
+
+jest.mock("@emailjs/browser", () => ({
+  __esModule: true,
+  default: {
+    sendForm: jest.fn(),
+  },
+}));
+
+describe("Contact form", () => {
+  test("sends email on form submit", async () => {
+    emailjs.sendForm.mockResolvedValueOnce({ status: 200 });
+
+    render(<Contact />);
+
+    fireEvent.change(screen.getByPlaceholderText("Name"), {
+      target: { value: "John" },
+    });
+    fireEvent.change(screen.getByPlaceholderText("Email"), {
+      target: { value: "john@example.com" },
+    });
+    fireEvent.change(screen.getByPlaceholderText("Message"), {
+      target: { value: "Hello" },
+    });
+
+    fireEvent.submit(screen.getByTestId("contact-form"));
+
+    expect(emailjs.sendForm).toHaveBeenCalled();
   });
 });
